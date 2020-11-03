@@ -40,3 +40,5 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('movies', 'MoviesController', ['only' => ['create', 'store', 'destroy', 'show']]);
 });
+// 外部連携用
+Route::resource('rest','RestappController', ['only' => ['index', 'show', 'create', 'store', 'destroy']]);
