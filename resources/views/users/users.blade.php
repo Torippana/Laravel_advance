@@ -34,9 +34,11 @@
 
                     <p>
                         @if(isset($movie->comment))
-                               {{ $movie->comment }}
+                            {{ $movie->comment }}
                         @endif
                     </p>
+
+                    @include('follow.follow_button',['user'=>$user])
 
                 </div>
 
